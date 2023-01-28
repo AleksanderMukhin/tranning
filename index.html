@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <form class="js-speaker-form">
+    <div class="form-field">
+     <input class="form-input" type="text" 
+     name="Name" id="name" autofocus 
+     placeholder=" ">
+     <label class="form-label" for="name">Name</label>
+     <svg class="icon" width="15" height="15">
+      <use href="./icons.svg#icon-instagram-w"></use>
+     </svg>
+    </div>
+
+
+    <label for="tel">Phone</label>
+    <input type="tel" name="tel" id="tel">
+
+     <label for="mail">Mail</label>
+    <input type="email" name="mail" id="mail">
+
+<div role="group">
+
+  <ul>
+    <li>
+       <label class="checkbox-label">
+        <input class="checkbox" type="checkbox" name="topic" value="html">
+        <span>
+          <svg width="10" height="10" class="icon-checkbox">
+            <use href="./icons.svg#icon-instagram-t"></use>
+          </svg>
+        </span>
+        HTML
+      </label>
+    </li>
+    <li>
+       <label class="checkbox-label">
+        <input class="checkbox" type="checkbox" name="topic" value="html">
+        <span>
+          <svg width="10" height="10" class="icon-checkbox">
+            <use href="./icons.svg#icon-instagram-t"></use>
+          </svg>
+        </span>
+        CSS
+      </label>
+    </li>
+    <li>
+      <label class="checkbox-label">
+        <input class="checkbox" type="checkbox" name="topic" value="html">
+        <span>
+          <svg width="10" height="10" class="icon-checkbox">
+            <use href="./icons.svg#icon-instagram-t"></use>
+          </svg>
+        </span>
+        JavaScript
+      </label>
+    </li>
+  </ul>
+     
+    
+     
+
+      
+
+    
+    <label for="junior">Junior</label>
+    <input type="radio" name="experience" value="junior" id="junior">
+
+    <label for="middle">Middle</label>
+    <input type="radio" name="experience" value="middle" id="middle">
+
+    <label for="senior">Senior</label>
+    <input type="radio" name="experience" value="senior" id="senior">
+
+    <label for="pdf">Telecharge</label>
+    <input type="file" name="pdf" id="pdf">
+
+    <label for="coment">Coments</label>
+    <textarea name="coment" id="coment" cols="4" rows="6"></textarea>
+
+    <input type="checkbox" name="accept" id="accept">
+    <label for="accept">Accept</label>
+</div>
+
+    <button type="submit">Заявка</button>
+  </form>
+
+
+  <button class="btn-work">Work</button>
+
+
+  <ul class="menu">
+    <li class="menu-item"><a href="" class="menu-link curent">Work</a></li>
+    <li class="menu-item"><a href="" class="menu-link">Rest</a></li>
+    <li class="menu-item"><a href="" class="menu-link">Pause</a></li>
+  </ul>
+
+
+
+
+
+
+  <script>
+    (() => {
+      document
+      .querySelector('.js-speaker-form')
+      .addEventListener('submit', e => {
+        e.preventDefault();
+
+        new FormData(e.currentTarget).forEach((value, name) =>
+        console.log(`${name}: ${value}`),
+        );
+    });
+  })();
+  </script>
+</body>
+</html>
